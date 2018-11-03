@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html t:type="layout" title="search results"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body class="container">
+    <h3>Search Results</h3>
+ 	
+ 	Number Of Books Found:${numResults}
+ 	<t:form t:id="searchFormResults" class="form-horizontal" method="POST">
+ 	<div class="eg">
+        <t:grid source="searchResults" rowsPerPage="14" pagerPosition="top" />
+    </div>
+   </t:form>
+   
+   
+</body>
+</html>
