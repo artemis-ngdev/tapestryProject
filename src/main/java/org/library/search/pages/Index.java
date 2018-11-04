@@ -2,6 +2,7 @@ package org.library.search.pages;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
@@ -23,7 +24,11 @@ import org.apache.tapestry5.ioc.annotations.Symbol;
  */
 public class Index
 {
-    @Property
+    
+	private static final Logger LOGGER = Logger.getLogger(SearchResults.class.getName());
+    
+	
+	@Property
     @Inject
     @Symbol(SymbolConstants.TAPESTRY_VERSION)
     private String tapestryVersion;
@@ -49,39 +54,19 @@ public class Index
     void onValidateFromSearchForm() {
 
         // Note, this method is triggered even if server-side validation has already found error(s).
-
-        if (bookName != null && bookName.equals("Acme")) {
-            form.recordError(bookNameField, "Book XXX must not be Acme.");
+    
+        if ( bookName == null || "".equals(bookName)) {
+            form.recordError(bookNameField, "Book must be entered to do the search");
         }
 
     }
 
     Object onSuccess() {
     	
-//    	String filterToUpperCase = bookName.toUpperCase();
-//    	List<Book> results =  getAllBooks()
-//    						.stream()
-//			    		    .filter(b-> {
-//								
-//								return b.getTitle().toUpperCase().contains(filterToUpperCase);
-//							})
-//			    		    .collect(Collectors.toList());
-    	
-       // searchResultsPage.setSearchResults(getAllBooks());
+    	LOGGER.info("mmmmmmm " + bookName);
+        this.searchResultsPage.setSearchTerm(bookName);
         return searchResultsPage;
     }
     
-//    private static List<Book>  getAllBooks()
-//    {
-//    	ArrayList<Book> list = new ArrayList<Book>();
-//    	 
-//    	list.add( new Book("Lord of the Rings","RK Rowling" ));
-//    	list.add( new Book("Harry Potter and The Wooden Stone","RK Rowling" ));
-//    	list.add( new Book("Lord of the Rings","writer 2" ));
-//    	list.add( new Book("Lord of the Rings","writer 4" ));
-//     	
-//    	return   list;
-//   
-//    }
     
 }
