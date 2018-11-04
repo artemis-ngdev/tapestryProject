@@ -4,11 +4,14 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
 
+import javax.inject.Inject;
+
 import org.apache.tapestry5.annotations.Import;
+import org.apache.tapestry5.annotations.Property;
 import org.library.model.Book;
 
 
-@Import(stylesheet="context:css/olive.css")
+@Import(stylesheet="context:css/custom.css")
 public class SearchResults implements Serializable {
 	
 	private static final Logger LOGGER = Logger.getLogger(SearchResults.class.getName());
@@ -17,9 +20,11 @@ public class SearchResults implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
+
+	 @Property
+    private Book book;
 	
-	
-	private List<Book> searchResults;
+    private List<Book> searchResults;
    
     public List<Book> getSearchResults() {
     	LOGGER.info("--------------");
@@ -33,6 +38,8 @@ public class SearchResults implements Serializable {
 	void onActivate(List<Book> searchResults) {
         this.setSearchResults(searchResults);
     }
+	 
+	
 
 	List<Book> onPassivate() {
         return this.searchResults;
@@ -40,5 +47,9 @@ public class SearchResults implements Serializable {
 
 	public Integer getNumResults() {
 		return this.getSearchResults().size();
+	}
+	
+	public String getBookTitle() {
+		return "hello";
 	}
  }

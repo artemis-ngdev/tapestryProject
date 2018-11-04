@@ -20,6 +20,8 @@ public class Book implements Serializable {
 	@Property
 	private Date publicationDate;
 	
+	
+	
 	public Book(final String title, final String author, final Date publicationDate ) {
 		this.author = author;
 		this.title = title;

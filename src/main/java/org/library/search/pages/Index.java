@@ -36,11 +36,9 @@ public class Index
     private String bookName;
 
     // Other pages
-
     @InjectPage
     private SearchResults searchResultsPage;
 
-    // Generally useful bits and pieces
 
     @InjectComponent("searchForm")
     private Form form;
@@ -53,7 +51,7 @@ public class Index
         // Note, this method is triggered even if server-side validation has already found error(s).
 
         if (bookName != null && bookName.equals("Acme")) {
-            form.recordError(bookNameField, "Book Name must not be Acme.");
+            form.recordError(bookNameField, "Book XXX must not be Acme.");
         }
 
     }

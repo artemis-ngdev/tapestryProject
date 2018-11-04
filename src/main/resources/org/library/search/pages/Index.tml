@@ -2,22 +2,23 @@
       t:sidebarTitle="Framework Version"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
-        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
-
+ 
     <p>${message:greeting}</p>
 
    
    
  <div class="eg">
         <t:form t:id="searchForm" class="form-horizontal" method="POST">
-            <div class="form-group">
-                <t:label for="bookName" class="col-sm-2"/>
+            <div class="form-group"><br/>
+                <t:label for="bookName" class="col-sm-2"/> 
+                <br/><br/>
                 <div class="col-sm-4">
                     <t:textfield t:id="bookName"/>
                 </div>
             </div>
             
-            
+            <br/> <br/>
+                       
             <div>
 	            <div class="form-group">
 	                <div class="col-sm-4 col-sm-offset-2">

@@ -1,16 +1,10 @@
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
-
+ 
 body {
     margin: 0;
     padding: 0;
-    background: #FFFFFF url(images/img01.jpg) repeat-x;
     text-align: justify;
     font: 15px Arial, Helvetica, sans-serif;
-    color: #626262;
+     
 }
 
 form {
@@ -20,8 +14,7 @@ form {
 
 input {
     padding: 5px;
-    background: #FEFEFE url(images/img13.gif) repeat-x;
-    border: 1px solid #626262;
+    border: 1px solid black;
     font: normal 1em Arial, Helvetica, sans-serif;
 }
 
@@ -30,7 +23,6 @@ h1, h1 a, h2, h2 a, h3, h3 a {
     text-decoration: none;
     font-family: Tahoma, Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
-    color: #444444;
 }
 
 h1 {

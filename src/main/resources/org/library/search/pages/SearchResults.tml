@@ -9,12 +9,14 @@
     <h3>Search Results</h3>
  	
  	Number Of Books Found:${numResults}
+  	
  	<t:form t:id="searchFormResults" class="form-horizontal" method="POST">
  	<div class="eg">
-        <t:grid source="searchResults" rowsPerPage="14" pagerPosition="top" />
+        <t:grid source="searchResults" rowsPerPage="14" pagerPosition="top" t:value="Book"/>
     </div>
    </t:form>
    
+    
    
 </body>
 </html>
