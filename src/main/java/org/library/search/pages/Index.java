@@ -67,21 +67,21 @@ public class Index
 //							})
 //			    		    .collect(Collectors.toList());
     	
-        searchResultsPage.setSearchResults(getAllBooks());
+       // searchResultsPage.setSearchResults(getAllBooks());
         return searchResultsPage;
     }
     
-    private static List<Book>  getAllBooks()
-    {
-    	ArrayList<Book> list = new ArrayList<Book>();
-    	 
-    	list.add( new Book("Lord of the Rings","RK Rowling" ));
-    	list.add( new Book("Harry Potter and The Wooden Stone","RK Rowling" ));
-    	list.add( new Book("Lord of the Rings","writer 2" ));
-    	list.add( new Book("Lord of the Rings","writer 4" ));
-     	
-    	return   list;
-   
-    }
+//    private static List<Book>  getAllBooks()
+//    {
+//    	ArrayList<Book> list = new ArrayList<Book>();
+//    	 
+//    	list.add( new Book("Lord of the Rings","RK Rowling" ));
+//    	list.add( new Book("Harry Potter and The Wooden Stone","RK Rowling" ));
+//    	list.add( new Book("Lord of the Rings","writer 2" ));
+//    	list.add( new Book("Lord of the Rings","writer 4" ));
+//     	
+//    	return   list;
+//   
+//    }
     
 }
