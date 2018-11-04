@@ -82,8 +82,7 @@ public class SearchResults implements Serializable {
     }
 
 	public void setSearchTerm(@NotNull @Size(max = 100) String insearchTerm) {
-		LOGGER.info("hhhhhhhh" + insearchTerm);
-		this.searchTerm = insearchTerm;
+ 		this.searchTerm = insearchTerm;
 		
 	}
 	

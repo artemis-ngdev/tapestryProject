@@ -27,20 +27,13 @@ public class Index
     
 	private static final Logger LOGGER = Logger.getLogger(SearchResults.class.getName());
     
-	
-	@Property
-    @Inject
-    @Symbol(SymbolConstants.TAPESTRY_VERSION)
-    private String tapestryVersion;
-
-
+	 
     @Property
     @NotNull
     @Size(max = 100)
     @Parameter(required = false) 
     private String bookName;
 
-    // Other pages
     @InjectPage
     private SearchResults searchResultsPage;
 
@@ -51,19 +44,14 @@ public class Index
     @InjectComponent("bookName")
     private TextField bookNameField;
     
+  
     void onValidateFromSearchForm() {
-
-        // Note, this method is triggered even if server-side validation has already found error(s).
-    
         if ( bookName == null || "".equals(bookName)) {
             form.recordError(bookNameField, "Book must be entered to do the search");
-        }
-
+          }
     }
 
     Object onSuccess() {
-    	
-    	LOGGER.info("mmmmmmm " + bookName);
         this.searchResultsPage.setSearchTerm(bookName);
         return searchResultsPage;
     }

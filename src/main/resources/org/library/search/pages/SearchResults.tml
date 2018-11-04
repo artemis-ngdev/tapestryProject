@@ -9,12 +9,8 @@
     <h3>Search Results</h3>
  	
  	Number Of Books Found:${numResults}
-  	
   	<div class="eg">
         <t:grid source="searchResults" rowsPerPage="14" pagerPosition="top" t:value="Book"/>
-    </div>
-    
-    
-   
+    </div> 
 </body>
 </html>
